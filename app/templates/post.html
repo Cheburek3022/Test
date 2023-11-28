@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+     <h3>{{ post.text}}</h3>
+     {% for i in comments %}
+         <p>{{ i.text }}</p>
+     {% endfor %}
+     <form method="post">
+         {{ form.hidden_tag() }}
+       <p>{{form.text.label}} {{ form.text(size=30) }}</p>
+       {{ form.button() }}
+     </form>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web</title>
+</head>
+<body>
+    {% if user.is_authenticated %}
+        <h1>{{user.username}}</h1>
+    {% else %}
+    <a href="/login">Log In</a>
+    {% endif %}
+    <a href="/logout">Logout</a>
+        <a href="/logout">Logout</a>
+       {% for i in post %}
+           <p>{{i.text }} {{i.date }}</p><a href="/post/{{i.id }}">GO</a>
+       {% endfor %}
+</body>
+</html>
